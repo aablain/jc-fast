@@ -1,0 +1,21 @@
+
+<div class="dayPageBox">
+
+  <h5>{{(dayToDisplay | async)?.date}}</h5>
+  <h1>{{(dayToDisplay | async)?.title}}</h1>
+  <h5>{{(dayToDisplay | async)?.author}}</h5>
+  <hr class="hrWidth">
+  <h2>Scripture</h2>
+  <p>{{(dayToDisplay | async)?.scripture}}</p>
+  <h5>{{(dayToDisplay | async)?.verse}}</h5>
+  <h2>Devotion</h2>
+  <p>{{(dayToDisplay | async)?.devotion}}</p>
+  <h2>Prayer</h2>
+  <p>{{(dayToDisplay | async)?.prayer}}</p>
+
+</div>
+
+
+<!-- <div *ngFor="let section of jcfast | async" (click)="showStuff(section)" class="">
+  <h1>{{section.title}}</h1>
+</div> -->

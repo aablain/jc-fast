@@ -1,0 +1,94 @@
+
+<div class="homepageHeader">
+  <img src="../../assets/images/40-day-logo.png" alt="">
+</div>
+
+<div class="homepage__firstBox">
+
+  <div class="homepage__firstBox__headerBox">
+    <h2>JANUARY 29TH </h2>
+    <span class="italic">TO</span>
+    <h2>MARCH 9TH</h2>
+  </div>
+
+  <h4 class="italic">SIGN UP FOR REMINDERS VIA</h4>
+
+  <form class="homepage__firstBox__form">
+    <div class="homepage__firstBox__form__inputBox">
+      <input type="text" name="textmessages" value="" placeholder="Text Messages">
+      <span class="italic">OR</span>
+      <input type="text" name="emails" value="" placeholder="Emails">
+    </div>
+    <button class="italic buttonStyle">SUBMIT</button>
+  </form>
+
+  <h3>WHY ARE WE FASTING?</h3>
+  <p>As we step into 2017 and head towards the completion of our 3rd year of establishing the local church, we felt compelled as a staff to call our church family to a 40 day fast beginning Sunday, January 29th leading up to our Jesus Culture Encounter Conference that kicks off Thursday, March 9th.</p>
+
+  <p>This will be our first time to set aside a season for focused fasting and prayer specifically to cry out to God for an immeasurable outpouring of His presence, to see the worldwide Church awakened, to prepare ourselves for the harvest of souls that is coming and witness every sphere of culture being transformed.</p>
+
+  <p>We have compiled a list of resources below from friends and ministries we believe in to help you prepare for the fasting and prayer season we are entering into. Please take time to plan and pray into the kind of fast God would have you do and join us as we seek God together.</p>
+
+  <p class="italic stayLeft">Banning Liebscher</p>
+
+</div>
+
+<div class="homepage__secondBox">
+  <div class="homepage__secondBox__leftBox">
+    <h2>CITY GROUPS</h2>
+    <p>Join together with members of the community to pray and fast as a family. Click the link below to sign up for a City Group nearest you.</p>
+    <span class="buttonStyle italic">JOIN A GROUP</span>
+  </div>
+  <div class="homepage__secondBox__rightBox">
+    <h2>RESOURCES & FAQ</h2>
+    <p>Want to know about differnet kinds of fasts? Don’t know how to fast? We can answer these questions and more on our resource and FAQ page.</p>
+    <span class="buttonStyle italic">LEARN MORE</span>
+  </div>
+</div>
+
+<div *ngFor="let section of jcfast | async" class="section">
+  <div class="box">
+    <h4>{{section.subtitle}}</h4>
+    <h2>{{section.title}}</h2>
+    <hr>
+    <p>{{section.blurb}}</p>
+
+    <div class="section__dayBox">
+      <div *ngFor="let day of section.days" (click)="goToDayDetailsPage(day)" class="section__dayBox__day">
+        <img src={{day.photo}} alt="" class="section__dayBox__day__photo">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="homepage__footerBox">
+  <div class="homepage__footerBox__insideBox">
+
+    <div class="homepage__footerBox__insideBox__40DayLogoBox">
+      <img src="../../assets/images/40-day-logo.png" alt="">
+    </div>
+
+    <div class="homepage__footerBox__insideBox__linksBox">
+      <h4>Prayer and Fasting</h4>
+      <span><a href="#">RESOURCES/FAQ</a></span>
+      <span><a href="#">CITY GROUPS</a></span>
+      <span class="spaceTop">Jesus Culture Sacramento</span>
+      <span class="italic ">ENCOUNTER GOD.</span>
+      <span class="italic ">EMPOWERING PEOPLE.</span>
+      <span class="italic ">ENGAGING OUR CITY.</span>
+    </div>
+
+    <div class="homepage__footerBox__insideBox__socialMediaBox">
+      <h4>Stay Connected</h4>
+      <span><a href="#">INSTAGRAM</a></span>
+      <span><a href="#">FACEBOOK</a></span>
+      <span><a href="#">TWITTER</a></span>
+    </div>
+
+    <div class="homepage__footerBox__insideBox__jcLogoBox">
+      <img src="../../assets/images/jc-logo.png" alt="">
+    </div>
+
+  </div>
+</div>

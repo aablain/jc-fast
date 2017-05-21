@@ -1,0 +1,17 @@
+{
+  "name": "jc-fast",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Austin Blain <austin.a.blain@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
