@@ -1,3 +1,8 @@
+body {
+  margin: 0px; }
+  body * {
+    box-sizing: border-box; }
+
 .homepageHeader {
   background-image: url("./assets/images/main-banner.jpg");
   background-position: center top;
@@ -7,11 +12,17 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+  transition: min-height 150ms ease-in-out; }
   .homepageHeader img {
     width: 50%;
     min-width: 300px;
     max-width: 385px; }
+  @media screen and (max-width: 480px) {
+    .homepageHeader {
+      min-height: 300px;
+      background-size: contain;
+      background-repeat: no-repeat; } }
 
 .homepage__firstBox {
   display: flex;
@@ -45,9 +56,10 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      flex-wrap: wrap;
       padding-bottom: 12px; }
       .homepage__firstBox__form__inputBox input {
-        padding: 7px 10px;
+        padding: 9px 12px;
         min-width: 175px;
         transition: border 125ms ease-in-out; }
         .homepage__firstBox__form__inputBox input:focus {
@@ -59,8 +71,8 @@
         padding-right: 8px; }
     .homepage__firstBox__form button {
       outline: none;
-      padding: 6px 28px;
-      min-height: 31px; }
+      padding: 7px 35px;
+      font-size: 1rem; }
   .homepage__firstBox h4, .homepage__firstBox h3 {
     margin-top: 0px;
     margin-bottom: 10px;
@@ -69,6 +81,15 @@
     font-weight: normal; }
   .homepage__firstBox p {
     text-align: justify; }
+  @media screen and (max-width: 480px) {
+    .homepage__firstBox__form__inputBox input {
+      flex-basis: 100%; }
+    .homepage__firstBox__form__inputBox > span {
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: 1rem; } }
 
 .homepage__secondBox {
   margin-left: auto;
@@ -77,6 +98,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 90%;
   max-width: 750px;
   padding-top: 80px; }
@@ -96,6 +118,67 @@
       text-align: center; }
     .homepage__secondBox__leftBox span, .homepage__secondBox__rightBox span {
       padding: 6px 28px; }
+  @media (max-width: 810px) {
+    .homepage__secondBox {
+      justify-content: center; }
+      .homepage__secondBox__leftBox, .homepage__secondBox__rightBox {
+        margin-left: 5%;
+        margin-right: 5%; }
+      .homepage__secondBox__leftBox {
+        padding-bottom: 55px; } }
+
+.homepage__youtube {
+  padding-top: 100px;
+  padding-bottom: 75px;
+  background-image: url("./assets/images/middle-banner.jpg");
+  background-size: cover;
+  background-position: center top;
+  min-height: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .homepage__youtube iframe {
+    min-height: 400px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto; }
+  .homepage__youtube__videosBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 700px; }
+    .homepage__youtube__videosBox__video {
+      flex-basis: 31.33%;
+      max-width: 31.33%; }
+      .homepage__youtube__videosBox__video img {
+        max-width: 100%; }
+  @media (max-width: 810px) {
+    .homepage__youtube iframe {
+      min-height: 300px;
+      max-width: 575px; } }
+  @media screen and (max-width: 480px) {
+    .homepage__youtube iframe {
+      min-height: 250px;
+      max-width: 425px; } }
+
+.homepage__devoTitle {
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #343435;
+  border-bottom: 1px solid #343435;
+  width: 100%;
+  min-width: 100vw;
+  max-width: 100vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 100px; }
+  .homepage__devoTitle h2 {
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center; }
 
 .section__dayBox {
   width: 90%;
@@ -125,40 +208,64 @@
       top: 0px;
       right: 0px;
       width: 50px; }
+  @media (max-width: 810px) {
+    .section__dayBox__day {
+      flex-basis: 40%;
+      margin-left: 2%;
+      margin-right: 2%;
+      max-width: 250px; } }
 
-.section .box {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .section .box hr {
-    max-width: 25px;
-    width: 25px; }
-  .section .box h4, .section .box h2, .section .box p {
-    max-width: 500px;
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 10px; }
-  .section .box h2 {
-    margin-bottom: 0px; }
-  .section .box p {
-    font-size: 0.8rem; }
+.section {
+  padding-bottom: 70px;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%; }
+  .section .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .section .box hr {
+      max-width: 25px;
+      width: 25px; }
+    .section .box h4, .section .box h2, .section .box p {
+      max-width: 500px;
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 10px; }
+    .section .box h4 {
+      font-weight: normal;
+      font-size: 0.8rem;
+      margin-bottom: 5px; }
+    .section .box h2 {
+      margin-bottom: 0px;
+      font-weight: normal; }
+    .section .box p {
+      font-size: 0.8rem;
+      margin-bottom: 20px; }
+  @media screen and (max-width: 480px) {
+    .section .box p {
+      padding-left: 12px;
+      padding-right: 12px; } }
 
 .homepage__footerBox {
+  margin-top: 50px;
   width: 100%;
-  min-width: 100vw;
-  max-width: 100vw;
+  min-width: 100%;
+  max-width: 100%;
   background-color: #343435;
   min-height: 150px;
   padding-top: 65px;
-  padding-bottom: 65px; }
+  padding-bottom: 65px;
+  padding-left: 40px;
+  padding-right: 40px; }
   .homepage__footerBox__insideBox {
     max-width: 900px;
-    min-width: 500px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     color: #fff; }
     .homepage__footerBox__insideBox__40DayLogoBox, .homepage__footerBox__insideBox__linksBox, .homepage__footerBox__insideBox__socialMediaBox, .homepage__footerBox__insideBox__jcLogoBox {
       display: flex;
@@ -184,6 +291,16 @@
       max-width: 35px; }
     .homepage__footerBox__insideBox .spaceTop {
       margin-top: 10px; }
+  @media screen and (max-width: 690px) {
+    .homepage__footerBox {
+      padding-top: 35px;
+      padding-bottom: 35px; }
+      .homepage__footerBox__insideBox__40DayLogoBox, .homepage__footerBox__insideBox__linksBox, .homepage__footerBox__insideBox__socialMediaBox, .homepage__footerBox__insideBox__jcLogoBox {
+        flex-basis: 100%;
+        align-items: center;
+        padding-bottom: 30px; }
+      .homepage__footerBox__insideBox__jcLogoBox img {
+        max-width: 60px; } }
 
 .italic {
   font-style: italic; }

@@ -46,9 +46,39 @@
   </div>
 </div>
 
+<div class="homepage__youtube">
+  <iframe id="player" data-video="tI6GRY20Tp4" frameborder="0" allowfullscreen="1" title="Youtube video player" src="https://www.youtube.com/embed/jSF6oE8Y3fk" width="100%" height="100%"></iframe>
+  <div class="homepage__youtube__videosBox">
+
+    <div class="homepage__youtube__videosBox__video">
+      <img src="https://img.youtube.com/vi/jSF6oE8Y3fk/mqdefault.jpg" alt="week 1 video for fast" data-youtube-id="jSF6oE8Y3fk">
+    </div>
+    <div class="homepage__youtube__videosBox__video">
+      <img src="https://img.youtube.com/vi/IgDHQ93H7KI/mqdefault.jpg" alt="week 2 video for fast" data-youtube-id="IgDHQ93H7KI">
+    </div>
+    <div class="homepage__youtube__videosBox__video">
+      <img src="https://img.youtube.com/vi/Rh7uGdyLMmQ/mqdefault.jpg" alt="week 3 video for fast" data-youtube-id="Rh7uGdyLMmQ">
+    </div>
+    <div class="homepage__youtube__videosBox__video">
+      <img src="https://img.youtube.com/vi/mJ_LN9BC2Ng/mqdefault.jpg" alt="week 4 video for fast" data-youtube-id="mJ_LN9BC2Ng">
+    </div>
+    <div class="homepage__youtube__videosBox__video">
+      <img src="https://img.youtube.com/vi/yTSH3euFKVE/mqdefault.jpg" alt="week 5 video for fast" data-youtube-id="yTSH3euFKVE">
+    </div>
+    <div class="homepage__youtube__videosBox__video">
+      <img src="https://img.youtube.com/vi/tI6GRY20Tp4/mqdefault.jpg" alt="week 6 video for fast" data-youtube-id="tI6GRY20Tp4">
+    </div>
+
+  </div>
+</div>
+
+<div class="homepage__devoTitle">
+  <h2>THE DEVOTIONAL</h2>
+</div>
+
 <div *ngFor="let section of jcfast | async" class="section">
   <div class="box">
-    <h4>{{section.subtitle}}</h4>
+    <h4 class="italic">{{section.subtitle}}</h4>
     <h2>{{section.title}}</h2>
     <hr>
     <p>{{section.blurb}}</p>

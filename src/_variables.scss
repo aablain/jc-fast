@@ -7,7 +7,10 @@ $extra-space: 12px;
 
 // Media Queries ----------------------------
 
-$mobile: "screen and (max-width: 445px)";
-$mobile-roof: "screen and (min-width: 446px)";
-$tablet: "screen and (max-width: 770px)";
-$tablet-roof: "screen and (min-width: 771px)";
+$mobile: "screen and (max-width: 480px)";
+$mobile-roof: "screen and (min-width: 481px)";
+$tablet: "(max-width: 810px)";
+$tablet-roof: "screen and (min-width: 811px)";
+$footer-reasemble: "screen and (max-width: 690px)";
+
+// 575px
