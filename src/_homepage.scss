@@ -105,6 +105,7 @@ body {
     &__form__inputBox {
       input {
         flex-basis: 100%;
+        border: 1px solid #E5E7E9;
       }
       & > span {
         margin-left: auto;
@@ -148,6 +149,10 @@ body {
     }
     span {
       padding: 6px 28px;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
     }
   }
   @media #{$tablet} {
@@ -175,11 +180,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 170px;
+  padding-bottom: 170px;
   iframe {
     min-height: 400px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5px;
   }
   &__videosBox {
     display: flex;
@@ -188,8 +196,9 @@ body {
     justify-content: space-between;
     max-width: 700px;
     &__video {
-      flex-basis: 31.33%;
-      max-width: 31.33%;
+      max-width: 33%;
+      width: 33%;
+      flex-basis: 33%;
       img {
         max-width: 100%;
       }
@@ -200,10 +209,21 @@ body {
       min-height: 300px;
       max-width: 575px;
     }
+    &__videosBox {
+      max-width: 575px;
+      &__video {
+        max-width: 49.5%;
+        width: 49.5%;
+        flex-basis: 49.5%;
+      }
+    }
   }
   @media #{$mobile} {
     iframe {
       min-height: 250px;
+      max-width: 425px;
+    }
+    &__videosBox {
       max-width: 425px;
     }
   }
@@ -308,6 +328,11 @@ body {
       margin-bottom: 20px;
     }
   }
+  @media #{$tablet-roof} {
+    .box h2 {
+      font-size: 2rem;
+    }
+  }
   @media #{$mobile} {
     .box p {
       padding-left: 12px;
@@ -407,15 +432,34 @@ body {
   align-self: flex-start;
 }
 
+.currentVid {
+  img {
+    filter: opacity(75%) blur(1px);
+  }
+}
+
 .buttonStyle {
   outline: none;
   box-shadow: none;
   border: 1px solid $button-black;
   background-color: $background-color;
+  font-family: times;
   transition: color $hover-delay ease-in-out, background-color $hover-delay ease-in-out;
   &:hover {
     background-color: $button-black;
     color: $background-color;
     cursor: pointer;
+  }
+  @media #{$mobile} {
+    transition: color 0ms ease-in-out, background-color 0ms ease-in-out;
+    &:hover {
+      background-color: $background-color;
+      color: inherit;
+      cursor: pointer;
+    }
+    &:active {
+      background-color: $button-black;
+      color: $background-color;
+    }
   }
 }

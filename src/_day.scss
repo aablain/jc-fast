@@ -1,8 +1,75 @@
+.dayPageBanner {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 200px;
+  background-image: url("./assets/images/banners/banner03.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+}
+
 .dayPageBox {
   width: 90%;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 40px;
+  font-family: 'Oswald', sans-serif;
+  & > *:not(h1) {
+    color: $button-black;
+  }
+  &__date {
+    font-weight: 200;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+  &__title {
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+    transition: font-size $hover-delay ease-in-out;
+    @media #{$tablet-roof} {
+      font-size: 3rem;
+    }
+  }
+  &__author {
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+  &__scriptureTitle {
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
+  &__scripture {
+    font-weight: 500;
+    text-align: justify;
+  }
+  &__verse {
+    font-weight: 300;
+    text-align: right;
+  }
+  &__devotionTitle {
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
+  &__devotion {
+    font-weight: 300;
+    text-align: justify;
+  }
+  &__prayerTitle {
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
+  &__prayer {
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
 }
 
 .dayPageBox .hrWidth {
@@ -10,6 +77,6 @@
   height: 1px;
   border: none;
   background-color: #000;
-  margin-left: none !important;
-  margin-right: none !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }

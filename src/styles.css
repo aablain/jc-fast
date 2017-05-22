@@ -83,7 +83,8 @@ body {
     text-align: justify; }
   @media screen and (max-width: 480px) {
     .homepage__firstBox__form__inputBox input {
-      flex-basis: 100%; }
+      flex-basis: 100%;
+      border: 1px solid #E5E7E9; }
     .homepage__firstBox__form__inputBox > span {
       margin-left: auto;
       margin-right: auto;
@@ -118,6 +119,9 @@ body {
       text-align: center; }
     .homepage__secondBox__leftBox span, .homepage__secondBox__rightBox span {
       padding: 6px 28px; }
+      .homepage__secondBox__leftBox span a, .homepage__secondBox__rightBox span a {
+        text-decoration: none;
+        color: inherit; }
   @media (max-width: 810px) {
     .homepage__secondBox {
       justify-content: center; }
@@ -137,12 +141,15 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  padding-top: 170px;
+  padding-bottom: 170px; }
   .homepage__youtube iframe {
     min-height: 400px;
     max-width: 700px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-bottom: 5px; }
   .homepage__youtube__videosBox {
     display: flex;
     flex-direction: row;
@@ -150,17 +157,26 @@ body {
     justify-content: space-between;
     max-width: 700px; }
     .homepage__youtube__videosBox__video {
-      flex-basis: 31.33%;
-      max-width: 31.33%; }
+      max-width: 33%;
+      width: 33%;
+      flex-basis: 33%; }
       .homepage__youtube__videosBox__video img {
         max-width: 100%; }
   @media (max-width: 810px) {
     .homepage__youtube iframe {
       min-height: 300px;
-      max-width: 575px; } }
+      max-width: 575px; }
+    .homepage__youtube__videosBox {
+      max-width: 575px; }
+      .homepage__youtube__videosBox__video {
+        max-width: 49.5%;
+        width: 49.5%;
+        flex-basis: 49.5%; } }
   @media screen and (max-width: 480px) {
     .homepage__youtube iframe {
       min-height: 250px;
+      max-width: 425px; }
+    .homepage__youtube__videosBox {
       max-width: 425px; } }
 
 .homepage__devoTitle {
@@ -242,6 +258,9 @@ body {
     .section .box p {
       font-size: 0.8rem;
       margin-bottom: 20px; }
+  @media screen and (min-width: 811px) {
+    .section .box h2 {
+      font-size: 2rem; } }
   @media screen and (max-width: 480px) {
     .section .box p {
       padding-left: 12px;
@@ -308,29 +327,98 @@ body {
 .stayLeft {
   align-self: flex-start; }
 
+.currentVid img {
+  filter: opacity(75%) blur(1px); }
+
 .buttonStyle {
   outline: none;
   box-shadow: none;
   border: 1px solid #343435;
   background-color: #fff;
+  font-family: times;
   transition: color 125ms ease-in-out, background-color 125ms ease-in-out; }
   .buttonStyle:hover {
     background-color: #343435;
     color: #fff;
     cursor: pointer; }
+  @media screen and (max-width: 480px) {
+    .buttonStyle {
+      transition: color 0ms ease-in-out, background-color 0ms ease-in-out; }
+      .buttonStyle:hover {
+        background-color: #fff;
+        color: inherit;
+        cursor: pointer; }
+      .buttonStyle:active {
+        background-color: #343435;
+        color: #fff; } }
+
+.dayPageBanner {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 200px;
+  background-image: url("./assets/images/banners/banner03.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif; }
 
 .dayPageBox {
   width: 90%;
   max-width: 500px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-bottom: 40px;
+  font-family: 'Oswald', sans-serif; }
+  .dayPageBox > *:not(h1) {
+    color: #343435; }
+  .dayPageBox__date {
+    font-weight: 200;
+    font-size: 1.1rem;
+    margin-bottom: 6px; }
+  .dayPageBox__title {
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+    transition: font-size 125ms ease-in-out; }
+    @media screen and (min-width: 811px) {
+      .dayPageBox__title {
+        font-size: 3rem; } }
+  .dayPageBox__author {
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-top: 0px; }
+  .dayPageBox__scriptureTitle {
+    font-weight: 300;
+    font-size: 1.8rem; }
+  .dayPageBox__scripture {
+    font-weight: 500;
+    text-align: justify; }
+  .dayPageBox__verse {
+    font-weight: 300;
+    text-align: right; }
+  .dayPageBox__devotionTitle {
+    font-weight: 300;
+    font-size: 1.8rem; }
+  .dayPageBox__devotion {
+    font-weight: 300;
+    text-align: justify; }
+  .dayPageBox__prayerTitle {
+    font-weight: 300;
+    font-size: 1.8rem; }
+  .dayPageBox__prayer {
+    font-weight: 200;
+    letter-spacing: 1px; }
 
 .dayPageBox .hrWidth {
   width: 25px;
   height: 1px;
   border: none;
   background-color: #000;
-  margin-left: none !important;
-  margin-right: none !important; }
+  margin-left: 0px !important;
+  margin-right: 0px !important; }
 
 /*# sourceMappingURL=styles.css.map */
