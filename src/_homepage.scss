@@ -136,6 +136,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 350px;
+    opacity: 0;
     h2 {
       margin-top: 0px;
       margin-bottom: 10px;
@@ -175,13 +176,22 @@ body {
   background-image: url("./assets/images/middle-banner.jpg");
   background-size: cover;
   background-position: center top;
-  min-height: 700px;
+  min-height: 1100px;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 170px;
+  padding-top: 220px;
   padding-bottom: 170px;
+  &__title {
+    font-weight: lighter;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+    background-color: $background-color;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px $slight-shadow;
+  }
   iframe {
     min-height: 400px;
     max-width: 700px;
@@ -195,6 +205,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 700px;
+    margin-bottom: 5px;
     &__video {
       max-width: 33%;
       width: 33%;
@@ -205,6 +216,7 @@ body {
     }
   }
   @media #{$tablet} {
+    min-height: 1280px;
     iframe {
       min-height: 300px;
       max-width: 575px;
@@ -219,6 +231,7 @@ body {
     }
   }
   @media #{$mobile} {
+    min-height: 850px;
     iframe {
       min-height: 250px;
       max-width: 425px;

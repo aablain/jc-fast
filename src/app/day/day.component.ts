@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 import { Day } from '../day.model';
+declare var $:any;
 
 @Component({
   selector: 'app-day',
@@ -37,8 +38,7 @@ export class DayComponent implements OnInit {
       console.log((this.dayId - 31));
       this.dayToDisplay = this.fastinfoService.grabDayById(("section4/days/" + (this.dayId - 31)));
     }
-    console.log(this.dayToDisplay);
-  }
 
+  }
 
 }
