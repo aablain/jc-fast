@@ -4,10 +4,12 @@ $slight-shadow: rgba(0, 0, 0, 0.15);
 
 $uniform-width: 500px;
 $hover-delay: 125ms;
+$hover-delay-slow: 225ms;
 $extra-space: 12px;
 
 // Media Queries ----------------------------
 
+$tiny: "screen and (max-width: 413px)";
 $mobile: "screen and (max-width: 480px)";
 $mobile-roof: "screen and (min-width: 481px)";
 $tablet: "(max-width: 810px)";

@@ -91,6 +91,9 @@ body {
       padding-top: 8px;
       padding-bottom: 8px;
       font-size: 1rem; } }
+  @media screen and (max-width: 413px) {
+    .homepage__firstBox__headerBox > h2 {
+      font-size: 1.2rem; } }
 
 .homepage__secondBox {
   margin-left: auto;
@@ -158,7 +161,11 @@ body {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    background-color: #000;
+    background-image: url("assets/images/jc-logo.png");
+    background-position: center center;
+    background-repeat: no-repeat; }
   .homepage__youtube__videosBox {
     display: flex;
     flex-direction: row;
@@ -310,6 +317,8 @@ body {
       .homepage__footerBox__insideBox__40DayLogoBox a, .homepage__footerBox__insideBox__linksBox a, .homepage__footerBox__insideBox__socialMediaBox a, .homepage__footerBox__insideBox__jcLogoBox a {
         color: #fff;
         font-weight: lighter; }
+        .homepage__footerBox__insideBox__40DayLogoBox a:hover, .homepage__footerBox__insideBox__linksBox a:hover, .homepage__footerBox__insideBox__socialMediaBox a:hover, .homepage__footerBox__insideBox__jcLogoBox a:hover {
+          color: #EDD9BD; }
       .homepage__footerBox__insideBox__40DayLogoBox span, .homepage__footerBox__insideBox__linksBox span, .homepage__footerBox__insideBox__socialMediaBox span, .homepage__footerBox__insideBox__jcLogoBox span {
         font-size: 0.8rem; }
       .homepage__footerBox__insideBox__40DayLogoBox h4, .homepage__footerBox__insideBox__linksBox h4, .homepage__footerBox__insideBox__socialMediaBox h4, .homepage__footerBox__insideBox__jcLogoBox h4 {
@@ -321,7 +330,10 @@ body {
       -webkit-filter: invert(1);
       filter: invert(1); }
     .homepage__footerBox__insideBox__jcLogoBox img {
-      max-width: 35px; }
+      max-width: 35px;
+      transition: transform 225ms ease-in-out; }
+      .homepage__footerBox__insideBox__jcLogoBox img:hover {
+        transform: scale(1.3); }
     .homepage__footerBox__insideBox .spaceTop {
       margin-top: 10px; }
   @media screen and (max-width: 690px) {
